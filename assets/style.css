@@ -1,0 +1,115 @@
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Cantarell, Roboto, Ubuntu, sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Cantarell, Roboto, Ubuntu, sans-serif; }
+}
+
+/* Font Sizes */
+h1,.h1{font-size:1.75rem;letter-spacing:0.137255663596502pt;}
+h2,.h2,.h2,.h2{font-size:1.375rem;letter-spacing:0.147957546370294pt;}
+h3,.h3{font-size:1.25rem;letter-spacing:0.151688405939469pt;}
+h4,.h4{font-size:1.125rem;letter-spacing:0.155504161345603pt;}
+body,.p1,h5,.h5{font-size:1rem;letter-spacing:0.159406744396367pt;}
+.p2,h6,.h6{font-size:0.875rem;letter-spacing:0.163398130857781pt;}
+.c1{font-size:0.75rem;letter-spacing:0.167480341454487pt;}
+.c2{font-size:0.6875rem;letter-spacing:0.169556149824687pt;}
+
+@media screen and (min-height:600px), (min-width:600px) {
+  h1,.h1{font-size:2.25rem;letter-spacing:0.12406513028028pt;}
+  h2,.h2{font-size:1.5rem;letter-spacing:0.144309693810739pt;}
+}
+
+@media print {
+  .title{font-size:1.75rem;letter-spacing:0.137255663596502pt;}
+  h1,.h1{font-size:1.5rem;letter-spacing:0.144309693810739pt;}
+  h2,.h2{font-size:1.375rem;letter-spacing:0.147957546370294pt;}
+  h3,.h3,h4,.h4{font-size:1.25rem;letter-spacing:0.151688405939469pt;}
+  .subtitle,h5,.h5,h6,.h6{font-size:1.125rem;letter-spacing:0.155504161345603pt;}
+  body,.p1{font-size:0.75rem;letter-spacing:0.167480341454487pt;}
+  .p2{font-size:0.6875rem;letter-spacing:0.169556149824687pt;}
+  .c1{font-size:0.625rem;letter-spacing:0.171655442892788pt;}
+  .c2{font-size:0.5625rem;letter-spacing:0.173778486353371pt;}
+}
+
+/*Margin*/
+body{
+  margin-left:16px;
+  margin-right:16px;
+}
+@media screen and (min-width:600px){
+  body{
+    margin-left:24px;
+    margin-right:24px;
+  }
+}
+
+.header{
+  background-color:#f22565;
+  color:#ffffff;
+  position:fixed;
+  z-index:99;
+  left:0;
+  top:0;
+  width:100%;
+  height:72px;
+  padding-left:16px;
+  padding-right:16px;
+}
+.body{
+  padding-top:72px
+}
+.cardcontainer{
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  align-items: left;
+  justify-content: center;
+}
+.card{
+  width:100%;
+  max-width:344px;
+  /* 384 = 12px padding + 360px image + 12px padding. Prepare a 3:1 (360*120px) image.*/
+  background-color: #ffffff;
+  border: 1px solid #bbbbbb;
+  padding: 16px;
+  margin: 8px;
+  text-align: left;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  border-radius: 16px;
+  -webkit-box-shadow: #777777 0px 4px 4px;
+  -moz-box-shadow: #777777 0px 4px 4px;
+  box-shadow: #777777 0px 4px 4px;
+}
+button, input{
+  height: 33px;
+  border: 1px solid #bbbbbb;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: 14px;
+  min-width: 64px;
+  width: auto;
+}
+button, .btn{
+  height: 36px;
+  -webkit-box-shadow: #777777 0px 2px 2px;
+  -moz-box-shadow: #777777 0px 2px 2px;
+  box-shadow: #777777 0px 2px 2px;
+  font-weight: 600;
+}
+.color-primary{
+  background-color: #f4447c;
+  border-color: #f4447c;
+  color: #ffffff;
+}
+.color-primary a{
+  color:#ffffff
+}

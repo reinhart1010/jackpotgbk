@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jackpot GBK</title>
+  <link href="assets/style.css" rel="stylesheet" type="text/css">
+  <script src="assets/main.js"></script>
+  <script src="assets/game.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <meta charset="UTF-8">
+</head>
+<body>
+  <div class="header">
+    <img src="assets/logo-simplified-white.svg" height="72px" width="auto">
+  </div>
+  <div class="body" id="landing" style="text-align:center">
+    <h1 style="font-size:3rem">Jackpot GBK*</h1>
+    <p>*Gunting, Batu, Kertas</p>
+    <div class="cardcontainer">
+      <div class="card color-primary">
+        <h1>Main</h1>
+        <p>Berapa pemain?</p>
+        <input type="number" pattern="[0-9]*" id="playervalue" value="2">
+        <button onclick="togglePage('landing','game'); startGame()">MULAI</button>
+      </div>
+      <div class="card">
+        <h2>Catatan</h2>
+        <p>
+          Untuk saat ini, game ini hanya bisa dimainkan minimal 2 orang.
+          Kedepannya, nanti bakal ada mode satu orang (<i>single player</i>)
+          dan <i>online multiplayer</i>.
+        </p>
+      </div>
+    </div>
+    <h1>Cara dan Aturan Main</h1>
+    <div class="cardcontainer">
+      <div class="card color-primary">
+        <h1>Duh, susah nulisnya...</h1>
+        <p>
+          Ada aja hal yang susah dijelasin, seperti melukis gambar,
+          menyatakan cinta, dan nulis tentang cara kerja game ini.
+        </p>
+        <p>
+          Kalau kamu tau maksudnya, dan mau perbaiki halaman ini, silahkan buka
+          <i>Issue</i> dan/atau <i>Pull Request</i> di
+          <a href="https://github.com/reinhart1010/jackpotgbk/">GitHub</a> atau <a href="https://gitlab.com/reinhart1010/jackpotgbk/">GitLab</a>.
+        </p>
+      </div>
+      <div class="card">
+        <h2>1. Tekan tombolnya.</h2>
+        <p>
+          Setiap pemain hanya punya satu tombol:
+        </p>
+        <button class="color-primary">MULAI/BERHENTI</button>
+        <p>
+          Kalau kamu tekan sekali,
+        </p>
+      </div>
+      <div class="card">
+        <h2>2. Cocokkan 2 item atau lebih.</h2>
+        <p>
+          Kamu harus dapet <b>minimal 2 item (gunting, batu, atau kertas)
+          yang sama</b>, walau urutannya berbeda. Misalnya,
+          <ul>
+            <li><i class="far fa-hand-scissors"></i><i class="far fa-hand-scissors"></i><i class="far fa-hand-scissors"></i> (3 gunting), atau</li>
+            <li><i class="far fa-hand-rock"></i><i class="far fa-hand-paper"></i><i class="far fa-hand-rock"></i> (2 batu dan 1 kertas)</li>
+          </ul>
+          Tapi, kalau kamu cuman dapet 1 gunting, 1 batu, dan 1 kertas, kamu
+          akan dapet item <i class="far fa-window-close"></i> (zonk) yang akan masuk ke antrian.
+        </p>
+      </div>
+      <div class="card">
+        <h2>3. Masuk antrian.</h2>
+        <p>
+          Setelah itu, item yang muncul paling banyak tadi masuk antrian.
+          Kalau kamu tadi dapet tiga item sama (misalnya <i class="far fa-hand-paper"></i><i class="far fa-hand-paper"></i><i class="far fa-hand-paper"></i>)
+          itemnya masuk antrian dua kali.
+        </p>
+        <p>
+          Nanti, semua item yang kamu dapet di antrian bakal ditandingi lawan
+          pemain lainnya.
+        </p>
+      </div>
+      <div class="card">
+        <h2>4. Dapat skor.</h2>
+        <p>Prinsipnya sama:</p>
+        <ul>
+          <li><i class="far fa-hand-scissors"></i> Gunting lawan <i class="far fa-hand-paper"></i> kertas,</li>
+          <li><i class="far fa-hand-rock"></i> Batu lawan <i class="far fa-hand-scissors"></i> gunting</li>
+          <li><i class="far fa-hand-paper"></i> Kertas lawan <i class="far fa-hand-rock"></i> batu.</li>
+        </ul>
+        <p>
+          Setiap pemain dengan <i class="far fa-window-close"></i> dapat skor 0.
+          Buat yang lain, skor dibagikan menurut jumlah pasangan item yang dilawan
+          menang ditambah jumlah <i class="far fa-window-close"></i> dibagi jumlah pemain yang tak dapet <i class="far fa-window-close"></i>.
+        </p>
+      </div>
+      <div class="card">
+        <h2>5. Contoh pembagian skor.</h2>
+        <p>
+          Misalnya, jika ada sepuluh pemain dengan 2 <i class="far fa-window-close"></i>, 3 <i class="far fa-hand-scissors"></i>, 4 <i class="far fa-hand-rock"></i>, dan 1 <i class="far fa-hand-paper"></i>, maka:
+          <ul>
+            <li>Skor pemain <i class="far fa-window-close"></i> adalah 0,</li>
+            <li>Skor pemain <i class="far fa-hand-scissors"></i> adalah 1 / 4 (<i class="far fa-hand-scissors"></i> &gt; <i class="far fa-hand-paper"></i>) + 2 / (10 - 2) = 0.50,</li>
+            <li>Skor pemain <i class="far fa-hand-rock"></i> adalah 3 / 3 (<i class="far fa-hand-rock"></i> &lt; <i class="far fa-hand-scissors"></i>) + 2 / (10 - 2) = 1.25,</li>
+            <li>Skor pemain <i class="far fa-hand-paper"></i> adalah 1 / 1 (<i class="far fa-hand-paper"></i> &lt; <i class="far fa-hand-rock"></i>) + 2 / (10 - 2) = 1.25,</li>
+          </ul>
+        </p>
+        <ul>
+      </div>
+    </div>
+    <h1>Tentang, Hak Cipta, dan Lisensi</h1>
+    <div class="cardcontainer">
+      <div class="card color-primary">
+        <h1>Kenapa game ini dibuat</h1>
+        <p>
+          Sebagai anak lulusan SMA yang tergila-2 dengan
+          <i><a href="https://www.google.com/search?q=chroicocephalus+novaehollandiae&tbm=isch" target="_blank">Chroicocephalus novaehollandiae</a></i>,
+          <i>game online</i>, medsos, website, dan <a href="https://iota.org" target="_blank">IOTA</a>,
+          aku membuat game ini untuk:
+        </p>
+        <ul>
+          <li>membuktikan kalau saya bisa buat game sederhana</li>
+          <li>menguji kemampuan pemograman, khususnya web</li>
+          <li>meluangkan waktu libur kelulusan SMA (April-Agustus).</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Bagikan ke</h2>
+        <p>
+          <button onClick="shareTo('fb')">Facebook</button>
+          <button onClick="shareTo('tw')">Twitter</button>
+          <button onClick="shareTo('wa')">WhatsApp</button>
+        </p>
+      </div>
+      <div class="card">
+        <h2>Lisensi</h2>
+        <b>Hak Cipta 2017-2019 Reinhart Previano Koentjoro.</b>
+        <p>
+          Kecuali dinyatakan lain, seluruh kode sumber proyek ini,
+          dapat dibagikan berdasarkan ketentuan menurut <a href="http://www.apache.org/licenses/LICENSE-2.0">Lisensi Apache, Versi 2.0.</a>
+        </p>
+        <p>
+          Seluruh kode sumber dapat kamu lihat di <a href="https://github.com/reinhart1010/jackpotgbk/">GitHub</a> atau <a href="https://gitlab.com/reinhart1010/jackpotgbk/">GitLab</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="body" id="game" style="display:none">
+    <div class="cardcontainer" id="gamearea">
+    </div>
+  </div>
+</body>
+</html>
