@@ -35,7 +35,13 @@ var fightready;
 var playervalue;
 function startGame(){
   var i;
-  playervalue = document.getElementById("playervalue").value;
+  // Input Validation
+  if (document.getElementById("playervalue").value >= 2){
+    playervalue = document.getElementById("playervalue").value;
+    togglePage('landing','game')
+  } else {
+    playervalue = 0
+  }
   for (i = 0; i < playervalue; i++){
     const cardtemplate = '<div class="card"><h1><span id="latestmove' + (i + 1) +
     '"></span><span contenteditable="true">Player '  + (i + 1) + '<span></h1><p><b>Skor:</b> <span id="score' +
