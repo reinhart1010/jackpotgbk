@@ -11,7 +11,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="title" content="Jackpot GBK*">
   <meta name="description" content="*Gunting, Batu, Kertas">
-  <meta name="msvalidate.01" content="7207A7D0D2D990AA325E9B161DA66A09"> <!-- GitHub -->
+  <meta name="msvalidate.01" content="7207A7D0D2D990AA325E9B161DA66A09"> <!-- Bing Webmaster Tools -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142190053-1"></script> <!-- Google Analytics -->
+  <!--
+  Note: Google Analytics is only loaded on reinhart1010.github.io/jackpotgbk and
+  reinhart1010.gitlab.io/jackpotgbk.
+
+  To completely disable tracking, bookmark either of these URLs:
+  + https://reinhart1010.github.io/jackpotgbk/?tracking=false
+  + https://reinhart1010.gitlab.io/jackpotgbk/?tracking=false
+  -->
 </head>
 <body>
   <div class="header">
@@ -38,56 +47,53 @@
     </div>
     <h1>Cara dan Aturan Main</h1>
     <div class="cardcontainer">
-      <div class="card color-primary">
-        <h1>Duh, susah nulisnya...</h1>
-        <p>
-          Ada aja hal yang susah dijelasin, seperti melukis gambar,
-          menyatakan cinta, dan nulis tentang cara kerja game ini.
-        </p>
-        <p>
-          Kalau kamu tau maksudnya, dan mau perbaiki halaman ini, silahkan buka
-          <i>Issue</i> dan/atau <i>Pull Request</i> di
-          <a href="https://github.com/reinhart1010/jackpotgbk/">GitHub</a> atau <a href="https://gitlab.com/reinhart1010/jackpotgbk/">GitLab</a>.
-        </p>
-      </div>
       <div class="card">
         <h2>1. Tekan tombolnya.</h2>
         <p>
           Setiap pemain hanya punya satu tombol:
         </p>
-        <button class="color-primary">MULAI/BERHENTI</button>
+        <button class="color-primary" onclick="window.alert('Hai gais!')">MULAI/BERHENTI</button>
         <p>
-          Kalau kamu tekan sekali, akan ada ikon (gunting, batu, atau kertas)
-          yang cepat berubah. Tekan lagi untuk memilih ikon yang kamu mau.
+          Kalau kamu tekan sekali, akan ada ikon benda
+          (<i class="far fa-hand-scissors"></i> gunting,
+          <i class="far fa-hand-rock"></i> batu, atau
+          <i class="far fa-hand-paper"></i> kertas) yang cepat berubah. Tekan
+          lagi untuk memilih ikon yang kamu mau.
         </p>
         <p>
-          Nantinya, ikon baru akan muncul di sebelahnya. Tekan tombol yang sama
-          untuk memilih sampai kepilih 3 item/ikon.
+          Lalu, ikon baru akan muncul di sebelahnya. Tekan tombol yang sama
+          untuk memilih. Cukup sampai tiga ikon, ya!
         </p>
       </div>
       <div class="card">
-        <h2>2. Cocokkan 2 item atau lebih.</h2>
+        <h2>2. Cocokkan 2-3 benda yang sama.</h2>
         <p>
-          Kamu harus dapet <b>minimal 2 item (gunting, batu, atau kertas)
-          yang sama</b>, walau urutannya berbeda. Misalnya,
+          Dari ketiga benda/ikon itu kamu harus dapet <b>minimal 2 benda
+          (gunting, batu, atau kertas) yang sama</b>, walaupun kalau urutannya
+          berbeda. Misalnya,
           <ul>
             <li><i class="far fa-hand-scissors"></i><i class="far fa-hand-scissors"></i><i class="far fa-hand-scissors"></i> (3 gunting), atau</li>
             <li><i class="far fa-hand-rock"></i><i class="far fa-hand-paper"></i><i class="far fa-hand-rock"></i> (2 batu dan 1 kertas)</li>
           </ul>
           Tapi, kalau kamu cuman dapet 1 gunting, 1 batu, dan 1 kertas, kamu
-          akan dapet item <i class="far fa-window-close"></i> (zonk) yang akan masuk ke antrian.
+          akan dapet benda <i class="far fa-window-close"></i> (zonk) yang akan
+          masuk ke antrian.
         </p>
       </div>
       <div class="card">
-        <h2>3. Masuk antrian.</h2>
+        <h2>3. Ngantri...</h2>
         <p>
-          Setelah itu, item yang muncul paling banyak tadi masuk antrian.
-          Kalau kamu tadi dapet tiga item sama (misalnya <i class="far fa-hand-paper"></i><i class="far fa-hand-paper"></i><i class="far fa-hand-paper"></i>)
-          itemnya masuk antrian dua kali.
+          Setelah itu, benda yang muncul paling banyak tadi masuk Daftar Antrian.
+          Kalau kamu tadi dapet tiga benda sama (misalnya <i class="far fa-hand-paper"></i><i class="far fa-hand-paper"></i><i class="far fa-hand-paper"></i>)
+          bendanya masuk ke antrian sebanyak dua kali.
         </p>
+        <b>Kenapa ngantri?</b>
         <p>
-          Nanti, semua item yang kamu dapet di antrian bakal ditandingi lawan
-          pemain lainnya.
+          Jackpot GBK bisa dimainkan dua orang atau lebih. Artinya, kamu bisa
+          ajak puluhan <del>hingga ratusan ribuan</del> teman buat main mainan
+          yang sama. Namun, skornya bakal dibagikan kalau semuanya sudah
+          memilih. Jadi, dengan Daftar Antrian, kamu masih bisa pilih barang
+          berikutnya tanpa harus nunggu sampai teman-teman kamu selesai.
         </p>
       </div>
       <div class="card">
@@ -98,21 +104,29 @@
           <li><i class="far fa-hand-rock"></i> Batu lawan <i class="far fa-hand-scissors"></i> gunting</li>
           <li><i class="far fa-hand-paper"></i> Kertas lawan <i class="far fa-hand-rock"></i> batu.</li>
         </ul>
+        <b>Kalau pemainnya cuman ada dua...</b>
         <p>
-          Setiap pemain dengan <i class="far fa-window-close"></i> dapat skor 0.
-          Buat yang lain, skor dibagikan menurut jumlah pasangan item yang dilawan
-          menang ditambah jumlah <i class="far fa-window-close"></i> dibagi jumlah pemain yang tak dapet <i class="far fa-window-close"></i>.
+          Yang menang dapat 1 skor. Kalau kamu dapat zonk
+          (<i class="far fa-window-close"></i>), lawanmu bakal menang asal dia
+          juga tidak kena zonk.
+        </p>
+        <b>Kalau pemainnya lebih dari dua...</b>
+        <p>
+          Skor bakal dibagikan berdasarkan jumlah pasangan lengkap barang dibagi
+          jumlah pemain dengan barang yang menang, kemudian ditambah jumlah
+          <i class="far fa-window-close"></i> dibagi jumlah pemain yang
+          tidak kena zonk (<i class="far fa-window-close"></i>).
         </p>
       </div>
       <div class="card">
         <h2>5. Contoh pembagian skor.</h2>
         <p>
-          Misalnya, jika ada sepuluh pemain dengan 2 <i class="far fa-window-close"></i>, 3 <i class="far fa-hand-scissors"></i>, 4 <i class="far fa-hand-rock"></i>, dan 1 <i class="far fa-hand-paper"></i>, maka:
+          Kalau ada sepuluh pemain dengan 2 <i class="far fa-window-close"></i>, 3 <i class="far fa-hand-scissors"></i>, 4 <i class="far fa-hand-rock"></i>, dan 1 <i class="far fa-hand-paper"></i>, maka:
           <ul>
             <li>Skor pemain <i class="far fa-window-close"></i> adalah 0,</li>
-            <li>Skor pemain <i class="far fa-hand-scissors"></i> adalah 1 / 4 (<i class="far fa-hand-scissors"></i> &gt; <i class="far fa-hand-paper"></i>) + 2 / (10 - 2) = 0.50,</li>
-            <li>Skor pemain <i class="far fa-hand-rock"></i> adalah 3 / 3 (<i class="far fa-hand-rock"></i> &lt; <i class="far fa-hand-scissors"></i>) + 2 / (10 - 2) = 1.25,</li>
-            <li>Skor pemain <i class="far fa-hand-paper"></i> adalah 1 / 1 (<i class="far fa-hand-paper"></i> &lt; <i class="far fa-hand-rock"></i>) + 2 / (10 - 2) = 1.25,</li>
+            <li>Skor pemain <i class="far fa-hand-scissors"></i> adalah 1 (pasangan lengkap <i class="far fa-hand-scissors"></i> dan <i class="far fa-hand-paper"></i>) / 4 + 2 (jumlah <i class="far fa-window-close"></i>) / (10 - 2) = 0.50,</li>
+            <li>Skor pemain <i class="far fa-hand-rock"></i> adalah 3 (pasangan lengkap <i class="far fa-hand-rock"></i> dan <i class="far fa-hand-scissors"></i>) / 3  + 2 (jumlah <i class="far fa-window-close"></i>) / (10 - 2) = 1.25,</li>
+            <li>Skor pemain <i class="far fa-hand-paper"></i> adalah 1 (pasangan lengkap <i class="far fa-hand-paper"></i> dan <i class="far fa-hand-rock"></i>) / 1 + 2 (jumlah <i class="far fa-window-close"></i>) / (10 - 2) = 1.25,</li>
           </ul>
         </p>
         <ul>
@@ -177,7 +191,9 @@
     </div>
   </div>
   <!-- Analytics -->
-  <script src="assets/analytics.js">
+  <script src="assets/analytics.js"></script>
+  <script>
+    startTracker()
   </script>
 </body>
 </html>
