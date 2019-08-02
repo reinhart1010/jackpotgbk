@@ -35,6 +35,7 @@ body,.p1,h5,.h5{font-size:1rem;letter-spacing:0.159406744396367pt;}
 body{
   margin-left:16px;
   margin-right:16px;
+  background-color: #eeeeee;
 }
 @media screen and (min-width:600px){
   body{
@@ -44,7 +45,7 @@ body{
 }
 
 .header{
-  background-color:#f22565;
+  background-color:#0094ff;
   color:#ffffff;
   position:fixed;
   z-index:99;
@@ -56,7 +57,7 @@ body{
   padding-right:16px;
 }
 .body{
-  padding-top:72px
+  padding-top:72px;
 }
 .cardcontainer{
   display: flex;
@@ -106,8 +107,8 @@ button, .btn{
   font-weight: 600;
 }
 .color-primary{
-  background-color: #f22565;
-  border-color: #f22565;
+  background-color: #0a7bcc;
+  border-color: #0a7bcc;
   color: #ffffff;
 }
 .color-primary a{
